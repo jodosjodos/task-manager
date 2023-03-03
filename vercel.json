@@ -1,0 +1,17 @@
+{
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/" }
+    ],
+    "env": {
+      "MONGO_URI": "mongodb://jodos:jodos2006@ac-ewyr1yd-shard-00-00.claard4.mongodb.net:27017,ac-ewyr1yd-shard-00-01.claard4.mongodb.net:27017,ac-ewyr1yd-shard-00-02.claard4.mongodb.net:27017/?ssl=true&replicaSet=atlas-6eewwk-shard-0&authSource=admin&retryWrites=true&w=majority",
+      "JWT_SECRET": "ShVmYq3t6w9z$B&E)H@McQfTjWnZr4u7",
+      "PORT": "3000"
+    }
+  }
+  
