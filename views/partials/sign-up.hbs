@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Create account</h1>
+    <div class="form">
+
+        <form action="/register" method="POST" class="signUp">
+    
+            <div class="form-row">
+                <label for="username">username</label>
+                <input type="text" id="username" name="userName" placeholder="enter your username" required class="form-input">
+    
+            </div>
+           
+            <div class="form-row">
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" placeholder="enter email" required class="form-input">
+                <p class="already"></p>
+            </div>
+            <div class="form-row">
+                <label for="password">password</label>
+                <input type="password" id="password" name="password" placeholder="enter your password" required class="form-input">
+           
+             </div>
+         
+             <div class="form-row">
+
+                <label for="confirmation">confirm password</label>
+                <input type="password" id="confirmation" name="confirmPassword"      placeholder="confirm password" required class="form-input">
+            </div>
+            <p class="bad"></p>
+                {{#if msg}}
+             <p class="{{msg_type}}">{{msg}}</p>
+             {{/if}}
+            <input type="submit" value="sign up" class="btn btn-block">
+           
+             <p class="no-account"> already  have an account?</p>
+             <a href="loginPage"class="btn btn-block link">login</a>
+    
+        </form>
+    </div>
+    {{!-- <script defer src="index.js" ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script> --}}
+   
+</body>
+</html>

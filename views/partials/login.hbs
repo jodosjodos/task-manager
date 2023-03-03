@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+   
+   
+    <h1>welcome to task manager</h1>
+<div class="form">
+    <form action="/login" method="POST" class="login">
+        <h5>login</h5>
+        <div class="form-row">
+
+            <label for="email">email</label>
+            <input type="text" name="email" id="email"placeholder="enter your email" class="form-input" required>
+        </div>
+        <div class="form-row">
+
+            <label for="password">password</label>
+            <input type="password"name="password" id="password" placeholder="Enter your password" class="form-input" required>
+        </div>
+        <div class="form-row">
+               {{#if msg}}
+             <p class="{{msg_type}}">{{msg}}</p>
+             {{/if}}
+            <button typ="submit" class="btn btn-block">login</button>
+            <p class="no-account">don't have an account?</p>
+            <a href="./signUpPage" class="btn btn-block link">create account</a>
+        </div>
+    </form>
+</div>
+<script>
+ 
+</script>
+</body>
+</html>
