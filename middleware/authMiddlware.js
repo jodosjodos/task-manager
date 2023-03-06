@@ -5,10 +5,10 @@ const jwt=require('jsonwebtoken');
 
 const requireAuth=(req,res,next)=>{
  const token0=req.cookies.jwtLogin;
- const token=token0.split(' ')[1];
-
+ 
  //check if token exist
- if(token){
+ if(token0){
+     const token=token0.split(' ')[1];
 jwt.verify(token,process.env.JWT_SECRET,(err,decodedToken)=>{
     if(err){
         console.log(err);

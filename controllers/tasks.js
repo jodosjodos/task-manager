@@ -10,9 +10,9 @@ const getAllTasks=async(req,res)=>{
   
   try {
     const token0 =req.cookies.jwtLogin;
-    const token=token0.split(' ')[1];
-   
-    if(token) {
+    
+    if(token0) {
+      const token=token0.split(' ')[1];
      
         jwt.verify(token,process.env.JWT_SECRET,async(err,decodedToken)=>{
             if(err) {
@@ -64,8 +64,8 @@ const getTask=async(req,res)=>{
 const createTask=async(req,res)=>{
     try {
         const token0=req.cookies.jwtLogin;
-        const token=token0.split(' ')[1];
-    if(token){
+        if(token0){
+      const token=token0.split(' ')[1];
        jwt.verify(token,process.env.JWT_SECRET,async(err,decodedToken)=>{
      if(err){
         console.log(err);
